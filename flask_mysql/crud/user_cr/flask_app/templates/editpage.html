@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block title %}EDIT{% endblock %}
+{% block content %}
+
+<h1>Edit User {{ user.id }}</h1>
+<form action="/edited/{{ user.id }}" method="POST">
+    <label for="first_name">First Name:</label>
+    <input type="text" name="first_name" value="{{ user.first_name }}">
+    <label for="last_name">Last Name:</label>
+    <input type="text" name="last_name" value="{{ user.last_name }}">
+    <label for="email">Email:</label>
+    <input type="email" name="email" value="{{ user.email }}">
+    <button>UPDATE</button>
+    <br>
+    <a href="/profile/{{ user.id }}">Show User</a>
+</form>
+
+{% endblock %}

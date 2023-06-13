@@ -1,0 +1,31 @@
+
+{% extends 'base.html' %}
+
+{% block title %}Add Recipe!{% endblock %}
+
+{% block content %}
+
+<h1>Add a New Recipe</h1>
+<form action="/createrecipe" method="POST">
+
+    <label for="name">Name :</label>
+    <input type="text" name="name">
+    <br>
+    <label for="descriptrion">Description</label>
+    <input type="text" name="description">
+    <br>
+    <label for="instruction">Instructions</label>
+    <input type="text" name="instruction">
+    <br>
+    <label for="date_made">Date Cooked/Made:</label>
+    <input type="date" name="date_made">
+    <br>
+    <label for="under_30">Under 30 mins?</label>
+    <input type="radio" name="under_30" value="Yes">Yes
+    <input type="radio" name="under_30" value="No">No
+    <br>
+    <button>Add Recipe</button>
+</form>
+
+
+{% endblock %}

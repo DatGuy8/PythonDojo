@@ -1,0 +1,16 @@
+
+{% extends 'base.html' %}
+
+{% block title %}ALL EMAILS{% endblock %}
+
+{% block content %}
+
+<h1>TABLE</h1>
+<!-- =================== Loops through and adds all emails ====================== -->
+{% for email in emails %}
+    <p>{{ email.email }}</p>
+{% endfor %}
+
+
+
+{% endblock %}

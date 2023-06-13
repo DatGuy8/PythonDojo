@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% block title %}Recipes Show{% endblock %}
+
+{% block content %}
+<h1>Welcome {{ session.first_name }}</h1>
+<a href="/recipes/new">Add Recipe</a>
+<!--add recipe sends to app route in recipes controller-->
+<button><a href="/logout">LOG OUT</a></button>
+<!--log out by clearing session-->
+<h3>All Posted recipes:</h3>
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Under 30 mins?</th>
+            <th scope="col">Posted By</th>
+            <th scope="col">Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+
+        {% for recipe in recipes %}
+        <tr>
+            <th scope="row">{{ recipe.name }}</th>
+            <td>{{ recipe.under_30 }}</td>
+            <td>{{ recipe.user.first_name }}</td>
+            <td>
+                <a href="/recipe/{{ recipe.id }}">View Recipe</a>        <!--===============link to view recipe==================-->
+                {% if recipe.user_id == session['userid'] %} <!--if that user is logged in they can edit or delete that recipe-->
+                <a href="/editrecipe/{{ recipe.id }}">Edit</a>
+                <a href="/deleterecipe/{{ recipe.id }}">Delete</a>
+                {% endif %}
+            </td>          
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+
+{% endblock %}

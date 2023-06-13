@@ -1,0 +1,36 @@
+Select * FROM dojos;
+
+INSERT INTO dojos (name)
+VALUES ('DRAGONS'),
+('LIONS'),
+('PANTHERS');
+
+DELETE FROM dojos WHERE id < 4;
+
+INSERT INTO dojos (name)
+VALUES ('COBRA'),
+('MONKEYS'),
+('BALLAS');
+
+SELECT * FROM ninjas;
+
+INSERT INTO ninjas (first_name, last_name, age, dojo_id)
+VALUES ('John','Tran','31','4'),
+('Cody','Santos','35','4'),
+('Billy','George','22','4');
+
+INSERT INTO ninjas (first_name, last_name, age, dojo_id)
+VALUES ('Goku','Sayian','16','5'),
+('Gon','Freeces','65','5'),
+('Killua','Golduck','23','5');
+
+INSERT INTO ninjas (first_name, last_name, age, dojo_id)
+VALUES ('Vegeta','Vega','55','6'),
+('Bob','Santos','79','6'),
+('Kyle','Plum','11','6');
+
+SELECT * FROM ninjas WHERE dojo_id = 4;
+
+SELECT * FROM ninjas WHERE dojo_id = 6;
+
+SELECT dojo_id FROM ninjas WHERE id = 9;

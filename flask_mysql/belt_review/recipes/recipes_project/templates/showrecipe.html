@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block title %}RECIPE!{% endblock %}
+
+{% block content %}
+
+<h1>Welcome {{ session.first_name }}</h1>
+
+<h2>{{ recipe.name }}</h2>
+<h3>POSTED BY: {{ recipe.user.first_name }}</h3>
+
+<div>
+    <p>Description:</p>
+    <p>{{ recipe['description'] }}</p>
+    <br>
+    <p>Under 30 Minutes?</p>
+    <p>{{ recipe.under_30 }}</p>
+    <br>
+    <p>Instructions:</p>
+    <p>{{ recipe.instructions }}</p>
+    <br>
+    <p>Date Made:</p>
+    <p>{{ recipe.date_made }}</p>
+    
+</div>
+
+
+{% endblock %}

@@ -1,0 +1,23 @@
+
+{% extends 'base.html' %}
+
+{% block title %}Email Validation{% endblock %}
+
+{% block content %}
+
+<form action="/addemail" method="POST">
+    <label for="email">Email</label>
+    <input type="email" name="email">
+    <button>SUMMIT</button>
+</form>
+{% with messages = get_flashed_messages() %}
+    {% if messages %}
+        {% for message in messages %}
+            <p class="codered">{{ message }}</p>
+        {% endfor %}
+    {% endif %}
+{% endwith %}
+
+
+
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title %}Great Number Game{% endblock %}
+
+{% block content %}
+
+    <form action="/yourguess" method="post">
+        <h3>Take a guess!!</h3>
+        <input type="number" id="guess" name="guess">
+        <button type="submit">Guess</button>
+    </form>
+
+
+{% endblock %}
+

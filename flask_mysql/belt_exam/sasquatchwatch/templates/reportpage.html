@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block title %}REPORT A SIGHTING!{% endblock %}
+
+{% block content %}
+<h1>Report a Sighting</h1>
+
+<form action="/addsight" method="POST">
+            {% with messages = get_flashed_messages(category_filter =['report'] ) %}
+                {% if messages %}
+                    {% for message in messages %}
+                        <p class="codered">{{ message }}</p>
+                    {% endfor %}
+                {% endif %}
+            {% endwith %}
+
+    <label for="location">Location:</label>
+    <input type="text" name="location">
+    <br>
+    <label for="description">What Happened?:</label>
+    <input type="text" name="description">
+    <br>
+    <label for="date_seen">Date of Sighting</label>
+    <input type="date" name="date_seen">
+    <br>
+    <label for="sasquatches"># of Sasquatches:</label>
+    <input type="number" name="sasquatches">
+    <button>REPORT!</button>
+</form>
+
+{% endblock %}

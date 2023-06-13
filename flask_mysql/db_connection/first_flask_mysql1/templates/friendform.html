@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title %}ADD A HOMIE PAGE{% endblock %}
+
+{% block content %}
+
+<h1>Add a Friend</h1>
+<form action="/savefriend" method="POST">
+    <label for="fname">First Name:</label>
+    <input type="text" name="fname">
+    <label for="lname">Last Name:</label>
+    <input type="text" name="lname">
+    <label for="occ" >Occupation:</label>
+    <input type="text" name="occ">
+    <input type="submit" value="Add Friend">
+</form> 
+
+{% endblock %}

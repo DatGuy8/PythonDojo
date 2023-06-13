@@ -1,0 +1,22 @@
+
+*{
+    padding: 0;
+    border: 0;
+    /* background-color: firebrick; */
+}
+
+/* table{
+    border-collapse: collapse;
+} */
+
+#boom{
+    margin: 15px auto;
+    color: aliceblue;
+    width: 75%;
+}
+
+
+th, tr {
+    border: 1px solid black;
+    padding: 10px;
+}

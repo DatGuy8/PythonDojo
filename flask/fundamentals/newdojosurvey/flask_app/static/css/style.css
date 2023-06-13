@@ -1,0 +1,21 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.textbox{
+    height: 200px;
+}
+
+#main > div{
+    display: flex;
+    justify-content: space-between;
+}
+
+#main{
+    width: 750px;
+    height: 800px;
+}
+
+.codered {
+    color: red;
+}

@@ -1,0 +1,71 @@
+{% extends 'base.html' %}
+
+{% block title %}LOGIN{% endblock %}
+
+{% block content %}
+
+<div id="mainbox">
+    <div>
+
+<!-- =========================FLASH MESSAGES================================== -->
+            {% with messages = get_flashed_messages(category_filter =['registration'] ) %}
+                {% if messages %}
+                    {% for message in messages %}
+                        <p class="codered">{{ message }}</p>
+                    {% endfor %}
+                {% endif %}
+            {% endwith %}
+
+
+<!-- ==========================FORM CREATING NEW USER=========================== -->
+            <h1 class="dojotitle">Registration</h1>
+            <form action="/createuser" method="POST" class="cleanerform"><!--========/createuser==========-->
+                <label for="first_name">First Name:</label>
+                <input type="text" name="first_name" class="rounded">
+                <br>
+                <label for="last_name">Last Name:</label>
+                <input type="text" name="last_name" class="rounded">
+                <br>
+                <label for="email">Email:</label>
+                <input type="email" name="email" class="rounded">
+                <br>
+                <label for="password">Password:</label>
+                <input type="password" name="password" class="rounded">
+                <br>
+                <label for="conpassword">Confirm Password:</label>
+                <input type="password" name="conpassword" class="rounded">
+                <br>
+                <button class="rounded bluebutton">Create</button>
+            </form>
+    </div>
+<!-- ===============================LOGIN FORM================================== -->
+    <div>
+            {% with messages = get_flashed_messages(category_filter=['login']) %}
+                {% if messages %}
+                    {% for message in messages %}
+                        <p class="codered">{{ message }}</p>
+                    {% endfor %}
+                {% endif %}
+            {% endwith %}
+        <h1 class="dojotitle">Login</h1>
+        <form action="/login" method="POST" class="cleanerform"><!--===========/login===========-->
+            <label for="email">Email:</label>
+            <input type="email" name="email" class="rounded">
+            <br>
+            <label for="password">Password:</label>
+            <input type="password" name="password" class="rounded">
+            <br>
+            <button class="rounded bluebutton">Login</button>
+
+
+        </form>
+
+
+
+    </div>
+</div>
+
+
+
+
+{% endblock %}

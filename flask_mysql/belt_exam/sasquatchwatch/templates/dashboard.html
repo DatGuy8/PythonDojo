@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block title %}Sasquatch Watch Home{% endblock %}
+
+{% block content %}
+
+<button><a href="/createsight">Report a Sighting</a></button>
+
+
+<div>
+    {% for sighting in sightings %}
+        
+        <p>{{ sighting.location }} - {{sighting.date_seen}}</p>
+        
+
+        <p>Reported by: {{sighting.user.first_name}} {{sighting.user.last_name}}</p>
+        
+
+        <a href="/viewsight/{{sighting.id}}">View</a>
+
+        {% if session['userid'] == sighting.user_id %}
+        <a href="/editpage/{{ sighting.id }}">Edit</a>
+        <a href="/delete/{{sighting.id}}">Delete</a>
+        {% endif  %}
+        <hr>
+    {% endfor %}
+</div>
+
+{% endblock %}

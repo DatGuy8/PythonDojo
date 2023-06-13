@@ -1,0 +1,16 @@
+*{
+    /* background-color: blanchedalmond; */
+    margin: 5px;
+}
+body{
+    
+    background-color: blanchedalmond;
+}
+
+a{
+    /* background-color: aqua; */
+    padding: 5px;
+}
+button{
+    background-color: aqua;
+}

@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block title %}Guess{% endblock %}
+
+{% block content %}
+{% if x == 0 %}
+<h3>YOU ARE RIGHT!! IT WAS {{num}}</h3>
+<h3>PLAY AGAIN?</h3>
+{% elif x == 1 %}
+<h3>TOO HIGH!</h3>
+{% else %}
+<h3>TOO LOW!</h3>
+{% endif %}
+
+<form action="/yourguess" method="post">
+    <input type="number" id="guess" name="guess">
+    <button type="submit">Guess</button>
+</form>
+
+
+{% endblock %}

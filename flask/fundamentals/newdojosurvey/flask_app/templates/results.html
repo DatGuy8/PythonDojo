@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block title %}DOJO SURVEY{% endblock %}
+
+{% block content %}
+<div id="main" class="container-m bg-info d-flex flex-column mb-3 justify-content-center gap-3">
+    <h1><u>Summited Info:</u></h1>
+    <div>
+        <h2>Name:</h2>
+        <h2>{{ session['userdata']['name']}}</h2>
+    </div>
+    <div>
+        <h2>Location:</h2>
+        <h2>{{ session['userdata']['location']}}</h2>
+    </div>
+    <div>
+        <h2>Favorite Language:</h2>
+        <h2>{{ session['userdata']['language']}}</h2>
+    </div>
+    <div>
+        <h2>Additional Comments:</h2>
+        <h2>{{ session['userdata']['comment']}}</h2>
+    </div>
+
+    <button><a href="/">Go back</a></button>
+</div>
+
+{% endblock %}

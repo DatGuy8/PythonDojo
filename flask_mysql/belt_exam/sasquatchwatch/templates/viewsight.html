@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block title %}Sasquatch SIGHTING!{% endblock %}
+
+{% block content %}
+<h2>{{sighting.location}} on {{sighting.date_seen}}</h2>
+
+<p>WHAT HAPPENED:</p>
+<p>{{sighting.description}}</p>
+
+<p># of Sasquatches: {{sighting.sasquatches}}</p>
+
+<p>Reported by: {{user.first_name}} {{user.last_name}}</p>
+{% endblock %}

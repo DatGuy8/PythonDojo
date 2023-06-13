@@ -1,0 +1,40 @@
+
+*{
+    padding: 0;
+    margin: 0;
+    background-color: cornsilk;
+}
+
+nav{
+    text-align: center;
+    background-color: black;
+    color: red;
+    font-size: 2em;
+    width: 35%;
+    margin: 30px auto;
+
+}
+
+.row1{
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+
+.row2{
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+
+.color1{
+    background-color: black;
+    height: 100px;
+    width: 100px;
+}
+
+.color2{
+    background-color: red;
+    height: 100px;
+    width: 100px;
+}

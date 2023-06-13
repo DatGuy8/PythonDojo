@@ -1,0 +1,33 @@
+body {
+    background-color: blanchedalmond;
+}
+
+#mainbox {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.dojotitle{
+    
+    margin: 20px;
+    text-align: center;
+}
+
+.bluebutton {
+    background-color: blue;
+    color: white;
+}
+
+.cleanerform {
+    display: flex;
+    flex-direction: column;
+}
+
+.codered {
+    color: red;
+}
+
+.title{
+    color: purple;
+    margin: 20px 50px;
+}

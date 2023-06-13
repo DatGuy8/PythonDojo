@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block title %}Edit Sighting{% endblock %}
+
+{% block content %}
+<h1>Edit Sighting</h1>
+
+<form action="/editsight/{{sighting.id}}" method="POST">
+            {% with messages = get_flashed_messages(category_filter =['report'] ) %}
+                {% if messages %}
+                    {% for message in messages %}
+                        <p class="codered">{{ message }}</p>
+                    {% endfor %}
+                {% endif %}
+            {% endwith %}
+
+    <label for="location">Location:</label>
+    <input type="text" name="location" value="{{sighting.location}}">
+    <br>
+    <label for="description">What Happened?:</label>
+    <input type="text" name="description" value="{{sighting.description}}">
+    <br>
+    <label for="date_seen">Date of Sighting</label>
+    <input type="date" name="date_seen" value="{{sighting.date_seen}}">
+    <br>
+    <label for="sasquatches"># of Sasquatches:</label>
+    <input type="number" name="sasquatches" value="{{sighting.sasquatches}}">
+    <button>EDIT!</button>
+</form>
+
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title %}HOME PAGE{% endblock %}
+
+
+{% block content %}
+<h1>MY HOMIES</h1>
+<a href="/createuser"><button>CREATE FRIEND</button></a>
+{% for friend in myfriends %}
+<h2>Name: {{friend.first_name}} {{friend.last_name}}</h2>
+<h2>Job: {{friend.occupation}}</h2>
+<hr>
+{% endfor %}
+
+{% endblock %}
